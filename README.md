@@ -25,9 +25,27 @@ review
 - content: review content
 - createdAt: the created datetime
 - updatedAt: the updated datetime
+
 user
 - username: user name
 - password: user password
+
+client
+- name: client app name
+- id: client app id
+- secret: client app secret
+- userId: the _id of user
+
+token
+- value: the string of token
+- userId: _id of user
+- clientId: _id of client app
+
+code
+- value: string of authorization code
+- redirecturi: string of uri 
+- userId: _id of user
+- clientId: _id of client app
 
 ###Folds:
 - server.js: index file
