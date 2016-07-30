@@ -15,7 +15,9 @@ all the APIs are tested by postman.
 - update a review: PUT /api/reviews/id  //body data: username,content
 - delete a review: DELETE /api/reviews/id 
 - sign up a user: POST /api/signup	//body data: username,password
-- I add the basic auth strategy for the api, hence you should use the user signup api firstly to create authentication user and password for other APIs.
+- create a new client: POST /api/clients //body data: name,id,secret and you need to use basic  oauth by using username and password
+- get clients: GET /api/clients //use basic oauth by using username and password
+- create access token: POST /api/oauth2/token: use basic oauth by using id and secret, body data:code,grant_type,redirect_uri
 
 ###Data Models:
 review
@@ -39,4 +41,6 @@ user
 - $node fakeReviewsData.js  // insert some fake reviews into the mongodb
 - $grunt
 
-
+###reference
+- The oauth2 is an authentication framework and the process of authentication is complicated and please see detail from reference:
+http://scottksmith.com/blog/2014/07/02/beer-locker-building-a-restful-api-with-node-oauth2-server/
